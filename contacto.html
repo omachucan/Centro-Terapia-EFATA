@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EFATA - Nosotros</title>
+    <title>EFATA - Contancto</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,22 +38,74 @@
 
     <!-- Acerca de Nosotros -->
     <main class="contenido-principal container">
-        <h2 class="texto-centrado">Sobre Nosotros</h2>
-        <div class="nosotros-contenido">
-            <div class="contenido-imagen">
-                <img src="/assets/occupationalHero.jpg" alt="Imagen Sobre Nosotros">
-            </div>
-            <div class="informacion-nosotros">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nihil rerum odio quia enim quod
-                    eligendi
-                    fugit laboriosam quibusdam saepe. Corrupti ipsam quo aspernatur. Vero cumque consectetur eligendi at
-                    magni!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nihil rerum odio quia enim quod
-                    eligendi
-                    fugit laboriosam quibusdam saepe. Corrupti ipsam quo aspernatur. Vero cumque consectetur eligendi at
-                    magni!</p>
-            </div>
-        </div>
+        <h2 class="texto-centrado">Contacto</h2>
+
+        <form class="formulario" action="">
+            <fieldset>
+                <legend>Tus Datos</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Coloca tu Nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Tu Asunto">
+                </div>
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Tu Email">
+                </div>
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Tu Teléfono">
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea rows="10" cols="20" name="mensaje" id="mensaje"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>País</legend>
+                <div class="campo">
+                    <label for="pais">País:</label>
+                    <select name="pais" id="pais">
+                        <option value="non" disabled>-- Seleccione --</option>
+                        <option selected value="PE">Perú</option>
+                        <option value="ECU">Ecuador</option>
+                        <option value="CO">Colombia</option>
+                        <option value="ARG">Argentina</option>
+                        <option value="CL">Chile</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información Extra</legend>
+                <div class="campo">
+                    <label for="cliente">Cliente:</label>
+                    <input type="radio" name="tipo" id="cliente" value="cliente">
+                </div>
+                <div class="campo">
+                    <label for="proveedor">Cliente:</label>
+                    <input type="radio" name="tipo" id="proveedor" value="proveedor">
+                </div>
+
+                <!-- DATALIST -->
+                <div class="campo">
+                    <label for="categoria">Categoría de Interés:</label>
+                    <input list="categorias" name="categorias" id="categoria">
+                    <datalist id="categorias">
+                        <option value="Terápia Lenguaje">
+                        <option value="Terápia Psicologica">
+                        <option value="Terápia Ocupacional">
+                    </datalist>
+                </div>
+            </fieldset>
+
+            <input class="btn btn-formulario" type="submit" value="Enviar Formulario">
+
+        </form>
+
 
 
 
